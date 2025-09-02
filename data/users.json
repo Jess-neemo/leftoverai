@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "email": "user@example.com",
+      "password": "1234",
+      "favorites": [
+        {
+          "title": "Boozy Bbq Chicken",
+          "image": "https://img.spoonacular.com/recipes/635675-312x231.jpg",
+          "link": "https://spoonacular.com/recipes/Boozy-Bbq-Chicken-635675"
+        },
+        {
+          "title": "Lemon Pilaf Chicken",
+          "image": "https://img.spoonacular.com/recipes/649733-312x231.jpg",
+          "link": "https://spoonacular.com/recipes/Lemon-Pilaf-Chicken-649733"
+        },
+        {
+          "title": "German Goulash",
+          "image": "https://img.spoonacular.com/recipes/644476-312x231.jpg",
+          "link": "https://spoonacular.com/recipes/German-Goulash-644476"
+        }
+      ],
+      "search_history": [
+        "wheat flour, beef",
+        "chicken,rice,broccoli",
+        "chicken,broccoli, rice"
+      ],
+      "premium": false,
+      "dark_mode": false
+    }
+  ]
+}

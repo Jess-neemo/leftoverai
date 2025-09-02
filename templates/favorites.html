@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Favorites</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>⭐ Your Favorite Recipes</h2>
+    {% if favorites %}
+      {% for r in favorites %}
+      <div style="margin:20px auto; text-align:center;">
+        <h4>{{ r.title }}</h4>
+        <img src="{{ r.image }}" width="150" style="border-radius:8px;" /><br>
+        <a href="{{ r.link }}" target="_blank">View Recipe</a>
+      </div>
+      <hr>
+      {% endfor %}
+    {% else %}
+      <p>No recipes saved yet!</p>
+    {% endif %}
+    <a href="/">← Home</a>
+  </div>
+</body>
+</html>

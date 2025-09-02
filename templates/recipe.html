@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recipes for {{ ingredients }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-theme="light">
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark</button>
+  <div class="container">
+    <h2>🍽️ Recipes with: {{ ingredients }}</h2>
+    {% for r in recipes %}
+    <div class="recipe-card">
+      <img src="{{ r.image }}" alt="{{ r.title }}">
+      <div class="recipe-card-body">
+        <h3>{{ r.title }}</h3>
+        <p><strong>✅ Uses:</strong> {{ r.used }}</p>
+        <p><strong>🛒 Needs:</strong> {{ r.missed }}</p>
+        <a href="{{ r.link }}" target="_blank">👉 Full Recipe</a>
+        <br>
+        <a href="{{ r.save_url }}" style="color:white;background:#e91e63;padding:6px 12px;border-radius:4px;text-decoration:none;">❤️ Save</a>
+      </div>
+    </div>
+    {% endfor %}
+    <a href="/">← Home</a>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>

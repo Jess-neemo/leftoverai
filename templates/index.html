@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeftoverAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-theme="light">
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    🌙<br>Dark
+  </button>
+
+  <div class="container">
+    <h1>🍽️ LeftoverAI</h1>
+    <p>Turn leftovers into delicious meals. Reduce waste, save money.</p>
+
+    <form action="/recipe" method="post" onsubmit="showLoading()">
+      <input 
+        type="text" 
+        name="ingredients" 
+        placeholder="e.g., rice, egg, tomato" 
+        required 
+      />
+      <select name="diet">
+        <option value="">Any Diet</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="glutenFree">Gluten-Free</option>
+      </select><br>
+      <button type="submit">Find Recipes</button>
+    </form>
+
+    <div class="search-history">
+      <strong>Recent Searches:</strong><br>
+      {% for item in history %}
+        <a href="/recipe?ingredients={{ item }}">{{ item }}</a><br>
+      {% endfor %}
+    </div>
+
+    <p>
+      <a href="/favorites">⭐ Favorites</a> | 
+      <a href="/planner">📅 Meal Planner</a>
+    </p>
+
+    <footer>
+      <p>Made with ❤️ for SDG 2: Zero Hunger</p>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

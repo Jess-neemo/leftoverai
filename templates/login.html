@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ 'Sign Up' if signup else 'Login' }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 {{ 'Sign Up' if signup else 'Login' }}</h1>
+    <form method="post">
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Password" required><br>
+      <button type="submit">{{ 'Sign Up' if signup else 'Login' }}</button>
+    </form>
+    <p>
+      {% if not signup %}
+        <a href="/signup">Don't have an account? Sign up</a>
+      {% else %}
+        <a href="/login">Already have an account? Login</a>
+      {% endif %}
+    </p>
+    <a href="/">← Home</a>
+  </div>
+</body>
+</html>
