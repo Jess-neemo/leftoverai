@@ -1,0 +1,14 @@
+{
+  "name": "recipe-planner-app",
+  "version": "1.0.0",
+  "description": "A Python Flask recipe planning application",
+  "main": "app.py",
+  "scripts": {
+    "build": "echo 'Build completed - Python Flask app ready'",
+    "dev": "python app.py",
+    "start": "python app.py"
+  },
+  "keywords": ["flask", "python", "recipe", "planner"],
+  "author": "",
+  "license": "MIT"
+}
