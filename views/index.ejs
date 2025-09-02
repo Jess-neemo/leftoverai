@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Planner</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍳 Recipe Planner</h1>
+        <p>Find recipes based on ingredients you have!</p>
+        
+        <form action="/recipe" method="post" class="search-form">
+            <input type="text" name="ingredients" placeholder="Enter ingredients (e.g., chicken, rice, tomato)" required>
+            <select name="diet">
+                <option value="">Any Diet</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten Free</option>
+            </select>
+            <button type="submit">Find Recipes</button>
+        </form>
+
+        <% if (history && history.length > 0) { %>
+        <div class="history">
+            <h3>Recent Searches</h3>
+            <ul>
+                <% history.forEach(search => { %>
+                <li><a href="/recipe?ingredients=<%= encodeURIComponent(search) %>"><%= search %></a></li>
+                <% }); %>
+            </ul>
+        </div>
+        <% } %>
+
+        <nav class="nav-links">
+            <a href="/favorites">My Favorites</a>
+            <a href="/planner">Meal Planner</a>
+            <a href="/login">Login</a>
+        </nav>
+    </div>
+</body>
+</html>
