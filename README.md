@@ -93,7 +93,7 @@ Smart fridge integration (IoT)
 LeftoverAI proves that small ideas can have big impact. 
 
 🟩 Slide 9: Meet the Builder
-[Your Name]
+Jessica Wairimu Kamau
 Student | Developer | Sustainability Advocate 
 
 🛠️ Built with: Python, Flask, AI, passion
@@ -108,8 +108,8 @@ We’re looking for:
 🌱 Partners (schools, food programs)
 💰 Support to scale the platform
 🌐 Live Demo: http://localhost:5000
-📧 Contact: your.email@example.com
-🐙 Code on GitHub: github.com/yourname/leftoverai
+📧 Contact: kjessicawairimu@gmail.com
+🐙 Code on GitHub: github.com/Jess-neemo/leftoverai
 
 Let’s turn leftovers into hope. 🍽️❤️ 
 
